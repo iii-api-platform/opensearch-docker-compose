@@ -22,7 +22,7 @@ def test_write_log():
 def test_read_log():
     resp = requests.get(
         f'{BASE}/app-logs/_search',
-        json={'query': {'match': {'message': 'hello'}}},
+        json={'query': {'match': {'message': 'test_write_log'}}},
         auth=AUTH,
         verify=False
     )
