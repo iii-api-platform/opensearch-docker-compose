@@ -1,4 +1,5 @@
 import json
+import time
 import pytest
 import requests
 from requests.auth import HTTPBasicAuth
@@ -21,6 +22,7 @@ def test_write_log():
 
 @pytest.mark.dependency(depends=['test_write_log'])
 def test_read_log():
+    time.sleep(30)
     resp = requests.post(
         f'{BASE}/app-logs/_search',
         json={'query': {'match': {'message': TEST_MSG}}},
