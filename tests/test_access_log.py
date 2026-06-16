@@ -6,12 +6,13 @@ from requests.auth import HTTPBasicAuth
 
 BASE = 'https://localhost:9200'
 AUTH = HTTPBasicAuth('admin', 'admin')
+TEST_MSG = 'Hello from test_write_log'
 
 @pytest.mark.dependency()
 def test_write_log():
     response = requests.post(
         f'{BASE}/app-logs/_doc',
-        json={'level': 'INFO', 'message': 'Hello from test_write_log'},
+        json={'level': 'INFO', 'message': TEST_MSG},
         auth=AUTH,
         verify=False
     )
@@ -22,7 +23,7 @@ def test_write_log():
 def test_read_log():
     resp = requests.post(
         f'{BASE}/app-logs/_search',
-        json={'query': {'match': {'message': 'test_write_log'}}},
+        json={'query': {'match': {'message': TEST_MSG}}},
         auth=AUTH,
         verify=False
     )
