@@ -4,7 +4,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 
-BASE = 'http://localhost:9200'
+BASE = 'https://localhost:9200'
 AUTH = HTTPBasicAuth('admin', 'admin')
 
 @pytest.mark.dependency()
@@ -12,7 +12,8 @@ def test_write_log():
     response = requests.post(
         f'{BASE}/app-logs/_doc',
         json={'level': 'INFO', 'message': 'Hello from test_write_log'},
-        auth=AUTH
+        auth=AUTH,
+        verify=False
     )
 
     assert response.status_code == 200
@@ -22,7 +23,8 @@ def test_read_log():
     resp = requests.get(
         f'{BASE}/app-logs/_search',
         json={'query': {'match': {'message': 'hello'}}},
-        auth=AUTH
+        auth=AUTH,
+        verify=False
     )
     hits = resp.json()['hits']['hits']
 
