@@ -16,7 +16,7 @@ jobs:
           python-version: '3.12'
       - name: Prepare for required steps
         run: |
-          ./generate-certs.sh
+          sudo ./generate-certs.sh
       - name: Running the OpenSearch
         run: |
           ./run-opensearch.sh
