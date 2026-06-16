@@ -13,15 +13,15 @@ plugins.security.ssl.http.pemtrustedcas_filepath: certificates/ca/ca.pem
 plugins.security.ssl.transport.enabled: true
 plugins.security.ssl.transport.pemtrustedcas_filepath: certificates/ca/ca.pem
 plugins.security.ssl.transport.enforce_hostname_verification: false
-
+/C=TW/ST=IDF/L=TAIWAN/O=III
 plugins.security.authcz.admin_dn:
-  - 'CN=ADMIN,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
+  - 'CN=ADMIN,O=III,L=TAIWAN,ST=IDF,C=TW'
 plugins.security.nodes_dn:
-  - 'CN=os00,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
-  - 'CN=os01,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
-  - 'CN=os02,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
-  - 'CN=os03,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
-  - 'CN=os04,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
-  - 'CN=os05,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
-  - 'CN=os06,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
-  - 'CN=os07,O=EXAMPLE,L=PARIS,ST=IDF,C=FR'
+  - 'CN=os00,O=III,L=TAIWAN,ST=IDF,C=TW'
+  - 'CN=os01,O=III,L=TAIWAN,ST=IDF,C=TW'
+  - 'CN=os02,O=III,L=TAIWAN,ST=IDF,C=TW'
+  - 'CN=os03,O=III,L=TAIWAN,ST=IDF,C=TW'
+  - 'CN=os04,O=III,L=TAIWAN,ST=IDF,C=TW'
+  - 'CN=os05,O=III,L=TAIWAN,ST=IDF,C=TW'
+  - 'CN=os06,O=III,L=TAIWAN,ST=IDF,C=TW'
+  - 'CN=os07,O=III,L=TAIWAN,ST=IDF,C=TW'
