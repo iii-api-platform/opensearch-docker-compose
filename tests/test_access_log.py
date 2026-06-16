@@ -28,5 +28,6 @@ def test_read_log():
         verify=False
     )
     hits = resp.json()['hits']['hits']
+    print(resp.json())
 
     assert len(hits) == 1
