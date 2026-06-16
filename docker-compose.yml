@@ -16,6 +16,7 @@ services:
       JAVA_HOME: /usr/share/opensearch/jdk
       bootstrap.memory_lock: "true" # along with the memlock settings below, disables swapping
       network.host: "0.0.0.0"
+      OPENSEARCH_INITIAL_ADMIN_PASSWORD: ${OPENSEARCH_INITIAL_ADMIN_PASSWORD:-YourStrongPassword!}
     ulimits: 
       memlock:
         soft: -1
@@ -49,6 +50,7 @@ services:
       JAVA_HOME: /usr/share/opensearch/jdk
       bootstrap.memory_lock: "true" # along with the memlock settings below, disables swapping
       network.host: "0.0.0.0"
+      OPENSEARCH_INITIAL_ADMIN_PASSWORD: ${OPENSEARCH_INITIAL_ADMIN_PASSWORD:-YourStrongPassword!}
     ulimits: 
       memlock:
         soft: -1
@@ -79,6 +81,7 @@ services:
       JAVA_HOME: /usr/share/opensearch/jdk
       bootstrap.memory_lock: "true" # along with the memlock settings below, disables swapping
       network.host: "0.0.0.0"
+      OPENSEARCH_INITIAL_ADMIN_PASSWORD: ${OPENSEARCH_INITIAL_ADMIN_PASSWORD:-YourStrongPassword!}
     ulimits: 
       memlock:
         soft: -1
