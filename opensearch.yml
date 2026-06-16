@@ -13,7 +13,6 @@ plugins.security.ssl.http.pemtrustedcas_filepath: certificates/ca/ca.pem
 plugins.security.ssl.transport.enabled: true
 plugins.security.ssl.transport.pemtrustedcas_filepath: certificates/ca/ca.pem
 plugins.security.ssl.transport.enforce_hostname_verification: false
-/C=TW/ST=IDF/L=TAIWAN/O=III
 plugins.security.authcz.admin_dn:
   - 'CN=ADMIN,O=III,L=TAIWAN,ST=IDF,C=TW'
 plugins.security.nodes_dn:
