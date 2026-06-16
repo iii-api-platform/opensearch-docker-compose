@@ -1,0 +1,27 @@
+name: OpenSearch Setup Tests
+
+on: [ push, pull_request ]
+
+jobs:
+  up-and-running:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get working copy
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      - name: Setup Python 3.12
+        uses: actions/setup-python@3.12
+        with:
+          python-version: '3.12'
+      - name: Prepare for required steps
+        run: |
+          ./generate-certs.sh
+      - name: Running the OpenSearch
+        run: |
+          ./run-opensearch.sh
+      - name: Run Read/Write OpenSearch log tests
+        run: |
+          cd tests/
+          pip install -r requirements-dev.txt
+          python3 -m pytest .

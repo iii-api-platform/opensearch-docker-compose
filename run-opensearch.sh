@@ -15,7 +15,7 @@ fi;
 docker compose down
 docker compose up -d
 
-echo "Wait for 30 seconds."
+echo "Wait for 60 seconds."
 sleep 60
 
 echo "Enabling the securityadmin plugin..."
