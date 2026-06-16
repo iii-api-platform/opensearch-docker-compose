@@ -16,7 +16,7 @@ def test_write_log():
         verify=False
     )
 
-    assert response.status_code == 200
+    assert response.status_code == 201
 
 @pytest.mark.dependency(depends=['test_write_log'])
 def test_read_log():
