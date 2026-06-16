@@ -20,7 +20,7 @@ def test_write_log():
 
 @pytest.mark.dependency(depends=['test_write_log'])
 def test_read_log():
-    resp = requests.get(
+    resp = requests.post(
         f'{BASE}/app-logs/_search',
         json={'query': {'match': {'message': 'test_write_log'}}},
         auth=AUTH,
